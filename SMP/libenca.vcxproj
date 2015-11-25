@@ -278,6 +278,9 @@ del ..\config.h
 )
 if exist ..\tools\encodings.h (
 del ..\tools\encodings.h
+)
+if exist $(OutDir)\include\enca.h (
+del $(OutDir)\include\enca.h
 )</Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
@@ -315,6 +318,9 @@ del ..\config.h
 )
 if exist ..\tools\encodings.h (
 del ..\tools\encodings.h
+)
+if exist $(OutDir)\include\enca.h (
+del $(OutDir)\include\enca.h
 )</Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
@@ -354,6 +360,9 @@ del ..\config.h
 )
 if exist ..\tools\encodings.h (
 del ..\tools\encodings.h
+)
+if exist $(OutDir)\include\enca.h (
+del $(OutDir)\include\enca.h
 )</Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
@@ -392,6 +401,9 @@ del ..\config.h
 )
 if exist ..\tools\encodings.h (
 del ..\tools\encodings.h
+)
+if exist $(OutDir)\include\enca.h (
+del $(OutDir)\include\enca.h
 )</Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
@@ -444,6 +456,9 @@ del ..\config.h
 )
 if exist ..\tools\encodings.h (
 del ..\tools\encodings.h
+)
+if exist $(OutDir)\include\enca.h (
+del $(OutDir)\include\enca.h
 )</Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
@@ -496,6 +511,9 @@ del ..\config.h
 )
 if exist ..\tools\encodings.h (
 del ..\tools\encodings.h
+)
+if exist $(OutDir)\include\enca.h (
+del $(OutDir)\include\enca.h
 )</Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
@@ -548,6 +566,9 @@ del ..\config.h
 )
 if exist ..\tools\encodings.h (
 del ..\tools\encodings.h
+)
+if exist $(OutDir)\include\enca.h (
+del $(OutDir)\include\enca.h
 )</Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
@@ -600,6 +621,9 @@ del ..\config.h
 )
 if exist ..\tools\encodings.h (
 del ..\tools\encodings.h
+)
+if exist $(OutDir)\include\enca.h (
+del $(OutDir)\include\enca.h
 )</Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
@@ -650,6 +674,9 @@ del ..\config.h
 )
 if exist ..\tools\encodings.h (
 del ..\tools\encodings.h
+)
+if exist $(OutDir)\include\enca.h (
+del $(OutDir)\include\enca.h
 )</Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
@@ -699,6 +726,9 @@ del ..\config.h
 )
 if exist ..\tools\encodings.h (
 del ..\tools\encodings.h
+)
+if exist $(OutDir)\include\enca.h (
+del $(OutDir)\include\enca.h
 )</Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
