@@ -1,5 +1,4 @@
 /*
-  @(#) $Id: convert_iconv.c,v 1.19 2005/02/27 12:40:50 yeti Exp $
   interface to UNIX98 iconv conversion functions
 
   Copyright (C) 2000-2003 David Necas (Yeti) <yeti@physics.muni.cz>
@@ -140,7 +139,7 @@ iconv_one_step(File *file_from,
     if (n == (size_t)-1) {
       /* EINVAL means some multibyte sequence has been splitted---that's ok,
          move it to the begining and go on */
-      if (errno == EINVAL) {
+      if (errno == EINVAL && !hit_eof) {
         memmove(file_from->buffer->data, p_from, size_from);
         file_from->buffer->pos = size_from;
       }

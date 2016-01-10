@@ -1,5 +1,4 @@
 #! /bin/sh
-# @(#) $Id: test-errors.sh,v 1.6 2003/11/17 12:27:39 yeti Exp $
 # Purpose: check how enca reacts on various incorrect inputs
 . $srcdir/setup.sh
 TEST_TEXT=$srcdir/cs-s.iso88592
@@ -22,4 +21,6 @@ chmod 000 zombie
 $ENCA -L none zombie 2>/dev/null && DIE=1
 chmod 700 zombie
 rm -f zombie 2>/dev/null
+# Test no converter
+$ENCA -C none -L cs -x utf-8 <$TEST_TEXT && DIE=1
 . $srcdir/finish.sh

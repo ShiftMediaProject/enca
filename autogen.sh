@@ -1,5 +1,4 @@
 #!/bin/sh
-# @(#) $Id: autogen.sh,v 1.9 2004/11/17 18:11:49 yeti Exp $
 # Run this to generate all the initial makefiles, etc.
 # Tweaked by David Necas (Yeti) <yeti@physics.muni.cz> from various other
 # autogen.sh's.  This file is in public domain.
@@ -20,9 +19,9 @@ ACLOCAL_FLAGS="-I m4"
 }
 
 (grep "^AM_PROG_LIBTOOL" ./configure.ac >/dev/null) && {
-  (libtool --version) < /dev/null > /dev/null 2>&1 || {
+  (libtoolize --version) < /dev/null > /dev/null 2>&1 || {
     echo
-    echo "**Error**: You must have \`libtool' installed."
+    echo "**Error**: You must have \`libtoolize' installed."
     echo "Get ftp://ftp.gnu.org/pub/gnu/libtool-1.4.tar.gz"
     echo "(or a newer version if it is available)"
     DIE=1
@@ -35,7 +34,7 @@ ACLOCAL_FLAGS="-I m4"
   echo "**ERROR**: You must have \`automake' installed to re-generate"
   echo "all the $PROJECT Makefiles."
   echo "Get ftp://ftp.gnu.org/pub/gnu/automake-1.8.3.tar.gz"
-  echo "(or a newer version if it is available) and read README.devel."
+  echo "(or a newer version if it is available) and read DEVELOP.md."
   DIE=1
   NO_AUTOMAKE=yes
 }
@@ -122,7 +121,7 @@ if test -z "$NO_AUTOMAKE"; then
     echo "**ERROR**: You need at least automake-1.8 installed to re-generate"
     echo "all the $PROJECT Makefiles."
     echo "Get ftp://ftp.gnu.org/pub/gnu/automake-1.8.3.tar.gz"
-    echo "(or a newer version if it is available) and read README.devel."
+    echo "(or a newer version if it is available) and read DEVELOP.md."
     DIE=1
   else
     echo "Automake $AM_VERSION: OK"
@@ -135,18 +134,18 @@ test -n "$NO_AUTOMAKE" || (aclocal --version) < /dev/null > /dev/null 2>&1 || {
   echo "**ERROR**: Missing \`aclocal'.  The version of \`automake'"
   echo "installed doesn't appear recent enough."
   echo "Get ftp://ftp.gnu.org/pub/gnu/automake-1.8.3.tar.gz"
-  echo "(or a newer version if it is available) and read README.devel."
+  echo "(or a newer version if it is available) and read DEVELOP.md."
   DIE=1
 }
 
 if test -z "$NO_LIBTOOL"; then
-  LT_VERSION=`libtool --version | sed -e '2,$ d' -e 's/ *([^()]*)$//' -e 's/.* \(.*\)/\1/' -e 's/-p[0-9]\+//'`
+  LT_VERSION=`libtoolize --version | sed -e '2,$ d' -e 's/ *([^()]*)$//' -e 's/.* \(.*\)/\1/' -e 's/-p[0-9]\+//'`
   if ! version_check "1.4" "$LT_VERSION" ; then
     echo
     echo "**ERROR**: You need at least libtool-1.4 installed to re-generate"
     echo "all the $PROJECT Makefiles."
     echo "Get ftp://ftp.gnu.org/pub/gnu/libtool-1.4.tar.gz"
-    echo "(or a newer version if it is available) and read README.devel."
+    echo "(or a newer version if it is available) and read DEVELOP.md."
     DIE=1
   else
     echo "Libtool $LT_VERSION: OK"
@@ -171,7 +170,7 @@ echo processing $dir
   automake --add-missing $am_opt && \
   autoconf) || {
     echo "**ERROR**: Re-generating failed.  You are allowed to shoot $PROJECT maintainer."
-    echo "(BTW, why are you re-generating everything? Have you read README.devel?)"
+    echo "(BTW, why are you re-generating everything? Have you read DEVELOP.md?)"
     exit 1
   }
 

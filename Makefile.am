@@ -1,4 +1,3 @@
-# @(#) $Id: Makefile.am,v 1.35 2005/11/24 10:21:32 yeti Exp $
 if MAINTAINER_MODE
 SUBDIRS = tools data script lib src devel-docs test
 else
@@ -24,7 +23,7 @@ M4TESTS = \
 
 EXTRA_DIST = \
   FAQ \
-  README.devel \
+  DEVELOP.md \
   README.md \
   TODO \
   ChangeLog.prelib \

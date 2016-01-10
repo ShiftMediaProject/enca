@@ -1,7 +1,7 @@
 #============================================================================
-# Enca v1.16 (2014-10-20)  guess and convert encoding of text files
+# Enca v1.17 (2016-01-04)  guess and convert encoding of text files
 # Copyright (C) 2000-2003 David Necas (Yeti) <yeti@physics.muni.cz>
-# Copyright (C) 2009-2014 Michal Cihar <michal@cihar.com>
+# Copyright (C) 2009-2016 Michal Cihar <michal@cihar.com>
 #============================================================================
 
 List of user-visible changes in Enca
@@ -10,6 +10,13 @@ More detailed log can be obtained from older changelogs or git log.
 Legend: + new feature
         * change of behaviour (including disappearing of a feature)
         - bugfix
+
+enca-1.17 2016-01-04
+  - Fixed conversion of GB2312 encoding with iconv
+  - Fixed iconv conversion on OSX
+  - Documentation improvements
+  - Fixed execution of external converters with ACLs
+  - Improved test coverage to 80%
 
 enca-1.16 2014-10-20
   - Fixed typo in Belarusian language name
