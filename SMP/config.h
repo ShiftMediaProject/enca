@@ -1,7 +1,4 @@
 
-/* Define to 1 if you have the `canonicalize_file_name' function. */
-/* #undef HAVE_CANONICALIZE_FILE_NAME */
-
 /* Define to 1 if you have the declaration of `LC_MESSAGES', and to 0 if you
    don't. */
 #define HAVE_DECL_LC_MESSAGES 0
@@ -137,18 +134,6 @@
 
 /* Define to 1 if the system has the type `_Bool'. */
 #define HAVE__BOOL 1
-
-/* Define to 1 if you have the file `/dev/arandom'. */
-/* #undef HAVE__DEV_ARANDOM */
-
-/* Define to 1 if you have the file `/dev/random'. */
-#define HAVE__DEV_RANDOM 1
-
-/* Define to 1 if you have the file `/dev/srandom'. */
-/* #undef HAVE__DEV_SRANDOM */
-
-/* Define to 1 if you have the file `/dev/urandom'. */
-#define HAVE__DEV_URANDOM 1
 
 /* Define as const if the declaration of iconv() needs const. */
 #define ICONV_CONST 
