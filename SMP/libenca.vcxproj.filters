@@ -19,6 +19,9 @@
     <Filter Include="Source Files\lib">
       <UniqueIdentifier>{58834a31-750d-47b3-bda9-fa71645e9b3f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\tools">
+      <UniqueIdentifier>{f2f5e41d-686d-4d9f-a145-2c0927b6df6c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="libenca.def">
@@ -109,11 +112,11 @@
     <ClInclude Include="..\lib\internal.h">
       <Filter>Header Files\lib</Filter>
     </ClInclude>
-    <ClInclude Include="encodings.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="config.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="tools\encodings.h">
+      <Filter>Header Files\tools</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

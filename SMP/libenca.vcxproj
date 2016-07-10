@@ -79,7 +79,7 @@
     <ClInclude Include="..\lib\enca.h" />
     <ClInclude Include="..\lib\internal.h" />
     <ClInclude Include="config.h" />
-    <ClInclude Include="encodings.h" />
+    <ClInclude Include="tools\encodings.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{FED9A26F-9738-45EE-B093-7375FA358911}</ProjectGuid>
