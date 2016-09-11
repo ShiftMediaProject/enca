@@ -40,7 +40,7 @@ int
 main(int argc, char *argv[])
 {
   char **pp_file, **flist; /* filename list pointer */
-  long int err; /* nonzero if process_file() ever returned nonzero */
+  long int err=0; /* nonzero if process_file() ever returned nonzero */
   EncaAnalyser an;
 
   /* Process command line arguments. */
@@ -74,7 +74,6 @@ main(int argc, char *argv[])
   }
   else {
     /* Process file list, cumultate the worst error in err. */
-    err = 0;
     while (*pp_file != NULL) {
       err |= process_file(an, *pp_file);
       enca_free(*pp_file);
@@ -82,6 +81,7 @@ main(int argc, char *argv[])
     }
   }
 
+  /* Free buffer */
   process_file(NULL, NULL);
   enca_analyser_free(an);
   enca_free(options.language);
@@ -163,7 +163,7 @@ process_file(EncaAnalyser an,
     if ((err == ERR_OK && !enca_charset_is_known(result.charset)
          && enca_errno(an) != ENCA_EEMPTY)
         || err == ERR_CANNOT)
-      return 1;
+      return EXIT_FAILURE;
 
     return (err == ERR_OK) ? EXIT_SUCCESS : EXIT_TROUBLE;
   }
